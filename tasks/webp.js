@@ -92,7 +92,7 @@ module.exports = function(grunt) {
       /**
        * Create folder for the dest file
        */
-      f.dest = f.dest.replace(path.extname(f.dest), '.webp');
+      f.dest = f.dest.replace(path.extname(f.dest), '.' + options.extname || '.webp');
       grunt.file.mkdir(path.dirname(f.dest));
 
       var args = [];
